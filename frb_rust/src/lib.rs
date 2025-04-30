@@ -5,7 +5,7 @@ pub mod handler;
 mod misc;
 mod platform_types;
 mod rust2dart;
-pub(crate) mod third_party;
+pub mod third_party;
 pub(crate) mod thread_pool;
 
 pub(crate) mod codec;
