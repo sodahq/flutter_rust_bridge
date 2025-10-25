@@ -18,7 +18,16 @@ pub struct SimpleAsyncRuntime(pub AssertUnwindSafe<tokio::runtime::Runtime>);
 
 impl Default for SimpleAsyncRuntime {
     fn default() -> Self {
-        Self(AssertUnwindSafe(tokio::runtime::Runtime::new().unwrap()))
+        Self(AssertUnwindSafe(
+            // TODO: Make the runtime configurable via API
+            tokio::runtime::Builder::new_multi_thread()
+                .worker_threads(1)
+                .global_queue_interval(31)
+                .thread_name("frb-tokio-async-runtime")
+                .enable_all()
+                .build()
+                .unwrap(),
+        ))
     }
 }
 
