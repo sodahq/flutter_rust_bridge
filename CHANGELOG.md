@@ -1,5 +1,34 @@
 # Changelog
 
+## 2.11.1
+
+* Please refer to https://fzyzcjy.github.io/flutter_rust_bridge/guides/miscellaneous/whats-new for what's changed in V2.
+* Patch release to fix installation error. For feature updates please refer to changelog of 2.11.0.
+
+## 2.11.0
+
+* Please refer to https://fzyzcjy.github.io/flutter_rust_bridge/guides/miscellaneous/whats-new for what's changed in V2.
+* Fix codegen installation error caused by breaking change in dependency #2794
+* Uses the output path of Dart when executing formats #2743 (thanks @AlexV525)
+* Allow bypassing codegen version check and produce log when enabled assertion #2737 (thanks @AlexV525)
+* Fix Dart_PostCObject double free after application is closed #2653 (thanks @alexlapa)
+* Fixes CI windows image #2784 (thanks @patmuk)
+* Upgrade Cargokit #2752
+* Bump logging dependencies to help dependency resolution for regex crate #2744 (thanks @alexthe2)
+* Use flutter-actions/setup-flutter instead #2741, Add melos #2738 (thanks @AlexV525)
+
+## 2.10.0
+
+* Please refer to https://fzyzcjy.github.io/flutter_rust_bridge/guides/miscellaneous/whats-new for what's changed in V2.
+* Implement `#[frb(ignore)]` for struct fields #2721 #2726 (thanks @kyrias)
+* Fix folder not created #2707 (thanks @ski0090)
+* Fix for strict-casts lint #2639 #2676 (thanks @PaulGrandperrin)
+* Support configuring whether to execute Dart format, Rust format, Dart fix #2673
+* Upgrade calls to wasm-bindgen #2672
+* Allow configuring default rust opaque implementation #2664 #2671 (thanks @aran)
+* Enable BoxedWireDartCodecCstGenerator branch #2670
+* Fix Dart_PostCObject double free #2653
+
 ## 2.9.0
 
 * Please refer to https://fzyzcjy.github.io/flutter_rust_bridge/guides/miscellaneous/whats-new for what's changed in V2.

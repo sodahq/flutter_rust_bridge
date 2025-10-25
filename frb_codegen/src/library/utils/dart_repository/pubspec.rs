@@ -6,16 +6,18 @@ use std::collections::HashMap;
 pub(crate) struct PubspecYaml {
     pub dependencies: Option<HashMap<String, Option<PubspecYamlDependencyVersion>>>,
     pub dev_dependencies: Option<HashMap<String, Option<PubspecYamlDependencyVersion>>>,
+    pub resolution: Option<String>,
+    pub workspace: Option<Vec<String>>,
 }
 
 /// e.g.
 /// ```yaml
-/// freezed: ^2.0.1
+/// freezed: ^3.0.6
 /// ```
 /// or
 /// ```yaml
 /// freezed:
-///   version: ^2.0.1
+///   version: ^3.0.6
 /// ```
 #[derive(Debug, Deserialize, PartialEq, Eq)]
 #[serde(untagged)]
